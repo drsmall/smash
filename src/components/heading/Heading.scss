@@ -1,0 +1,12 @@
+@import '../../theme/theme.scss';
+.Heading {
+  padding:10px;
+  margin:10px 0px;
+  display:inline-block;
+  background: none;
+  border-bottom:2px solid $secondary-background;
+  font-family: $header-font;
+  font-size:40px;
+  text-transform: uppercase;
+  font-weight:bold;
+}

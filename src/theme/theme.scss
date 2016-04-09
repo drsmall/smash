@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+//Global variables
+$primary-background: #181818;
+$secondary-background: #313232;
+$primary-red: #9a1424;
+$primary-blue: #1689ba;
+$header-font: 'Montserrat';
+$para-font: 'Varela Round';
+
+
+//Global Styles
+*:focus{
+  outline:none !important;
+  border:none;
+  border:none;
+  font-family:$header-font;
+}
+
+p, label{
+  font-family:$para-font;
+  font-size:25px;
+}
+
+@mixin insetGenerator($color){
+  background: $color;
+  box-shadow:inset  0px 1px 11px darken($color, 10%), 0px 8px 0px darken($color,6%);
+
+  border-bottom:1px solid lighten($color, 6%);
+
+
+}
+
+@mixin buttonGenerator($color){
+  background-color:$color;
+  box-shadow: 0px 8px 0px darken($color,10%);
+
+  &:active{
+    transition: all .1s;
+    box-shadow: 0px 3px 0px darken($color,10%);
+    top:5px;
+  }
+}
+
+
+body{
+  background:$primary-background;
+  color:white;
+}
+
+button{
+  @include buttonGenerator($primary-blue);
+  text-transform: uppercase;
+  font-size:30px;
+  outline:none;
+  border:none;
+  font-family: $header-font;
+  text-align:center;
+  cursor:pointer;
+  padding:10px;
+
+  color:#fafafa;
+  transition: all .1s;
+  position:relative;
+  top:0px;
+}
+
+
+.Content{
+  padding:10px;
+  padding-top:0;
+}
+
+.center_h{
+  text-align:center;
+}
+
+input {
+  font-size:35px;
+  color: $primary-red;
+  background: $secondary-background;
+  border:none;
+  font-family: $header-font;
+  text-align:center;
+  width:100px;
+}
