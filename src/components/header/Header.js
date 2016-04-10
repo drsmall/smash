@@ -6,11 +6,9 @@ export default class Header extends Component {
   render() {
     return (
       <div className="Header">
-        Smash Bros Tournament!
+        Smash Bros Tournament
       </div>
     );
   }
-
-
 
 };

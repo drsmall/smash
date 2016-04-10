@@ -7,7 +7,7 @@ module.exports = {
   devtool: 'eval-source-map',
   entry: [
     'babel-polyfill',
-    'webpack-hot-middleware/client?reload=true',
+    'webpack-hot-middleware/client',
     './src/index'
   ],
   output: {
@@ -34,7 +34,7 @@ module.exports = {
         include: __dirname,
         query: {
           plugins: ['transform-runtime'],
-          presets: ['es2015', 'stage-0', 'react'],
+          presets: ['es2015', 'stage-0', 'react', 'react-hmre'],
         }
       }, 
       {
