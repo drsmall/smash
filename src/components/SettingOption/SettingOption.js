@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { default as InputRange } from '../../components/InputRange/InputRange.js';
+import { default as InputRange } from '../InputRange/InputNumberRange.js';
 import './SettingOption.scss';
 
 export default class SettingOption extends Component {
