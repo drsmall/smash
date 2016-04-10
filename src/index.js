@@ -9,6 +9,7 @@ import App from './containers/app/App';
 import Home from './containers/home/Home';
 import NotFound from './containers/misc/NotFound';
 import './theme/theme.scss';
+//import './main.scss';
 const store = configureStore();
 
 

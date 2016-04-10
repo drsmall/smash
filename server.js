@@ -6,10 +6,10 @@ import express from 'express';
 import path from 'path';
 import http from 'http';
 import bodyParser from 'body-parser';
-import webpackConfig from './webpack.config';
+import webpackConfig from './webpack.config.js';
 
 import jwt from 'jsonwebtoken';
-import jwtConfig from './jwt.config.json';
+//import jwtConfig from './jwt.config.json';
 
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -28,8 +28,8 @@ if (isDeveloping) {
       colors: true,
       hash: false,
       timings: true,
-      chunks: false,
-      chunkModules: false,
+      chunks: true,
+      chunkModules: true,
       modules: false
     }
   }));

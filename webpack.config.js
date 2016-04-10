@@ -3,9 +3,8 @@
 var path = require('path');
 var webpack = require('webpack');
 
-
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   entry: [
     'babel-polyfill',
     'webpack-hot-middleware/client?reload=true',
@@ -42,19 +41,21 @@ module.exports = {
         test: /\.json?$/,
         loader: 'json'
       },
-      {
-        test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader : 'file-loader'
-      },
+      /*{
+        test: /\.css?$/,
+        loaders: ['style', 'raw'],
+        include: __dirname
+      },*/
       {
         test: /\.scss$/,
-        loaders: ["style", "css?sourceMap", "sass?sourceMap"],
-        exclude: /node_modules/
+        loaders: ["style", "css", "sass"]
       },
-
       { test: /\.(jpe?g|png|gif|svg)$/, 
         loader: 'url', 
         query: {limit: 10240} 
+      },
+      { test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader : 'file-loader'
       }
     ]
   }
